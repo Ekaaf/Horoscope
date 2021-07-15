@@ -1,0 +1,14 @@
+.error{
+    color: red;
+}
+.active{
+	background-color: #0c0c97;
+	color: white;
+}
+.active:hover{
+	color: white;
+}
+header ul li a:hover{
+	background-color: #5d5dca;
+	color: white!important;
+}
