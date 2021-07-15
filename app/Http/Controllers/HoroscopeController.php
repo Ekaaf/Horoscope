@@ -11,14 +11,17 @@ use App\Http\Requests\HoroscopeYearRequest;
 
 class HoroscopeController extends Controller
 {   
+    
     public function __construct(){
         $this->horoscopeService = new HoroscopeService();
     }
+
 
     public function generateHoroscope(HoroscopeYearRequest $request){
         $signs = getZodiacSigns();
         return view('genereate_horoscope')->with('signs',$signs);
     }
+
 
     public function SaveHoroscope(HoroscopeYearRequest $request){
         $list = array();
@@ -62,6 +65,7 @@ class HoroscopeController extends Controller
             return redirect()->back()->with('error', "Couldn't save!")->withInput();
         }
     }
+
 
     public function horoscope(HoroscopeRequest $request){
         $currentRoute = $request->path();
@@ -117,8 +121,5 @@ class HoroscopeController extends Controller
         }
         return view('best_year');
     }
-
-
-    
 
 }
