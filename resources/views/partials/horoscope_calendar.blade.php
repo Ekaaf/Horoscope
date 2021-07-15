@@ -9,7 +9,7 @@
         $numberofDays =  count($data);
         $i = 0;
     ?>
-    <div class="col" style="overflow-x: scroll;">
+    <div class="col-md-4 scroll" style="overflow: hidden;overflow-x: scroll;">
         <h4 class="text-center">{{date("F", strtotime($data[10]['year'].'-'.$data[10]['month'].'-'.$data[10]['day']))}}</h4>
         <table class="table table-bordered">
             <thead>
@@ -50,4 +50,6 @@
     </div>
     @endforeach
 </div>
+
+<style type="text/css"></style>
 @endif

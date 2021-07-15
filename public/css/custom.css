@@ -12,3 +12,13 @@ header ul li a:hover{
 	background-color: #5d5dca;
 	color: white!important;
 }
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
